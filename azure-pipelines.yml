@@ -8,7 +8,6 @@ variables:
   vmImageName: 'ubuntu-latest'
   
   # Testes com o Apache Kafka
-  loadTestsScript: 'loadtest-contagem-kafka.js'
   testsDirectory: './Tests'
 
 stages:
@@ -30,7 +29,6 @@ stages:
             echo '***** kafkacat -h *****'
             kafkacat -h
           displayName: Verificar instalação do kcat/kafkacat
-
         - script: |
             echo '***** Enviando mensagens para o Apache Kafka *****'
             
